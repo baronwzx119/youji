@@ -1,7 +1,7 @@
 <template>
   <div class="menu"  id='bottom_menu'>
     <ul>
-      <router-link :to="{path: 'hello'}">
+      <router-link :to="{path: 'home'}">
       <li id='home'>
         <i  class="fa fa-home"></i>
         <p>首页</p>
@@ -19,7 +19,7 @@
         <p>消息</p>
       </li>
       </router-link>
-      <router-link :to="{path: 'home'}">
+      <router-link :to="{path: 'user'}">
       <li>
         <i class="fa fa-user-o"></i>
         <p>我的</p>
@@ -30,6 +30,7 @@
 </template>
 
 <script>
+
 export default {
  data () {
     return {
@@ -59,7 +60,9 @@ a {
 }
 .menu{
   width:100%;
-  position: absolute;
+  position: fixed;
+  z-index:99999;
+  background:#ffffff;
   bottom:0px;
   height:4rem;
   border-top:1px solid #cccccc;
@@ -81,6 +84,6 @@ a {
   line-height:1.4rem;
 }
 .router-link-active{
-  color:#42b983;
+  color:#00cdeb;
 }
 </style>

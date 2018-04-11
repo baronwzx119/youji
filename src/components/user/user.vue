@@ -1,24 +1,23 @@
 <template>
-  <div class="user">
-    
-    <bottom-menu></bottom-menu>
+  <div class="home">
+    <h1>{{ msg }}</h1>
+    <h2>Essential Links</h2>
+   <bottom-menu></bottom-menu>
   </div>
 </template>
 
 <script>
-import bottomMenu from './common/menu'
-
+import bottomMenu from '../common/menu'
 export default {
-  name: 'User',
+  name: 'user',
   data () {
     return {
-      
+      msg: 'Welcome to Your Vue.js App'
     }
   },
   components: {
-    	bottomMenu,
-
-    },
+    bottomMenu
+    }
 }
 </script>
 
@@ -37,9 +36,5 @@ li {
 }
 a {
   color: #42b983;
-}
-.user{
-  width:100%;
-  height:100%;
 }
 </style>

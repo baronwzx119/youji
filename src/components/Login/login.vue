@@ -35,6 +35,7 @@ import {setCookie} from '../../service/service'
     methods: {
       setCookie: function () {
         setCookie('token', this.username, 1)
+        this.$router.push('home')
       }
     }
   }
