@@ -1,0 +1,19 @@
+{
+  "items": [{
+      "name": "普吉岛",
+      "url": "./static/1.jpg"
+    },
+    {
+      "name": "清迈",
+      "url": "./static/2.jpg"
+    },
+    {
+      "name": "苏梅岛",
+      "url": "./static/1.jpg"
+    },
+    {
+      "name": "曼谷",
+      "url": "./static/2.jpg"
+    }
+  ]
+}

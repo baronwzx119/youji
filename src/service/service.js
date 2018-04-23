@@ -1,3 +1,5 @@
+// import axios from 'axios'
+import objective from '../assets/data/objective.json'
 
 export const setCookie = (name, value, expiredays) => {
   var exdate = new Date()
@@ -16,4 +18,16 @@ export const getCookie = name => {
     }
   }
   return ''
+}
+
+export const getObjective = () => {
+  // axios
+  //   .get('')
+  //   .then(function (response) {
+  //     return response
+  //   })
+  //   .catch(function (error) {
+  //     console.log(error)
+  //   })
+ return objective
 }

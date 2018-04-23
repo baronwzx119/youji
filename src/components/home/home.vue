@@ -8,22 +8,11 @@
    </div>
 
    <div class="content">
+     <p>{{$store.state.Objective.items}}</p>
      <ul>
-       <li>
-         <img src="../../assets/imgs/1.jpg" />
-         <h2>普吉岛</h2>
-       </li>
-       <li>
-         <img src="../../assets/imgs/2.jpg" />
-         <h2>苏梅岛</h2>
-       </li>
-       <li>
-         <img src="../../assets/imgs/1.jpg" />
-         <h2>清迈</h2>
-       </li>
-       <li>
-         <img src="../../assets/imgs/2.jpg" />
-         <h2>芽庄</h2>
+       <li  v-for ="item in Objective" :key="item.name">
+         <img :src= "item.url"/>
+         <h2>{{item.name}}</h2>
        </li>
      </ul>
    </div>
@@ -32,16 +21,33 @@
 </template>
 
 <script>
+import store from '../../store'
 import bottomMenu from '../common/menu'
+import {mapState, mapActions} from 'vuex'
+
 export default {
   name: 'home',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      items: []
     }
   },
   components: {
     bottomMenu
+    },
+    store,
+     mounted () {
+     this.getObjective()
+    },
+    computed: {
+             ...mapState([
+                'Objective'
+            ])
+        },
+    methods: {
+      ...mapActions([
+        'getObjective'
+      ])
     }
 }
 </script>
